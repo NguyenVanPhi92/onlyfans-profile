@@ -2,7 +2,7 @@ import { FiCloud, FiCode, FiCpu, FiFacebook, FiGithub } from 'react-icons/fi'
 
 export const AppConfig = {
     name: 'Van Phi Nguyen',
-    username: 'monokaijs', // should be GitHub username
+    username: 'Kjiooy', // should be GitHub username
     avatar: 'https://i.imgur.com/nqXoDyv.jpeg',
     verticalAvatar: 'https://i.imgur.com/AD7uyCy.png',
     introduction:
@@ -23,12 +23,12 @@ export const AppConfig = {
     socialLinks: [
         {
             name: 'GitHub',
-            url: 'https://github.com/monokaijs',
+            url: 'https://github.com/NguyenVanPhi92',
             icon: FiGithub
         },
         {
             name: 'Facebook',
-            url: 'https://facebook.com/delimister',
+            url: 'https://www.facebook.com/aotisnguyen',
             icon: FiFacebook
         }
     ],

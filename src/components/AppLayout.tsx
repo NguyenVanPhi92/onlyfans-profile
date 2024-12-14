@@ -2,7 +2,7 @@ import Sider from '@/components/Sider'
 import { ReactNode } from 'react'
 import Contact from '@/components/Contact'
 
-// Wrap App
+// Wrapper App
 export default function AppLayout({
     children,
     hideContact
@@ -11,11 +11,7 @@ export default function AppLayout({
     hideContact?: boolean
 }) {
     return (
-        <div
-            className='
-        
-        flex flex-row xl:container mx-auto h-full gap-0 lg:gap-4 xl:gap-8'
-        >
+        <div className='flex flex-row xl:container mx-auto h-full gap-0 lg:gap-4 xl:gap-8'>
             <Sider />
             <div
                 className='

@@ -1,7 +1,7 @@
 import { FiCloud, FiCode, FiCpu, FiFacebook, FiGithub } from 'react-icons/fi'
 
 export const AppConfig = {
-    name: 'Van Phi Nguyen',
+    name: 'Phi Nguyen',
     username: 'Kjiooy', // should be GitHub username
     avatar: 'https://i.imgur.com/nqXoDyv.jpeg',
     verticalAvatar: 'https://i.imgur.com/AD7uyCy.png',

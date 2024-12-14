@@ -17,7 +17,7 @@ export default function ProfileHeader() {
                         <OpenMenuButton />
 
                         <div className='md:px-4'>
-                            <div className='font-semibold'>Van Phi Nguyen</div>
+                            <div className='font-semibold'>Phi Nguyen</div>
                             <div className='text-[12px]'>3 Posts, 25K Views</div>
                         </div>
                     </div>

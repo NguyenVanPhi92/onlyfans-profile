@@ -17,7 +17,7 @@ export const AppConfig = {
         },
         {
             name: 'Freelance',
-            price: 'From $100'
+            price: 'From $15/hour'
         }
     ],
     socialLinks: [

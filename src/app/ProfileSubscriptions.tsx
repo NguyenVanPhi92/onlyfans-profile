@@ -3,9 +3,9 @@ import { cn } from '@/lib/utils/cn'
 
 export default function ProfileSubscriptions() {
     return (
-        <div className={'p-4 bg-white my-2'}>
-            <div className={'text-neutral-500 font-medium'}>SUBSCRIPTION</div>
-            <div className={'flex flex-col gap-2 mt-4'}>
+        <div className='p-4 bg-white my-2'>
+            <div className='text-neutral-500 font-medium'>SUBSCRIPTION</div>
+            <div className='flex flex-col gap-2 mt-4'>
                 {AppConfig.subscriptions.map((sub) => (
                     <a
                         href={'/contact'}
@@ -14,8 +14,8 @@ export default function ProfileSubscriptions() {
                             !sub.preferred && 'border border-primary text-primary bg-transparent'
                         )}
                     >
-                        <span className={'uppercase'}>{sub.name}</span>
-                        <span className={'uppercase'}>{sub.price}</span>
+                        <span className='uppercase'>{sub.name}</span>
+                        <span className='uppercase'>{sub.price}</span>
                     </a>
                 ))}
             </div>

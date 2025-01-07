@@ -10,27 +10,12 @@ export const AppConfig = {
         `Working in scalable and high-performance technology systems.\n` +
         `Web Development, Mobile Development, DevOps & more.`,
     subscriptions: [
-        {
-            name: 'Hire Me',
-            price: 'At any price',
-            preferred: true
-        },
-        {
-            name: 'Freelance',
-            price: 'From $15/hour'
-        }
+        { name: 'Hire Me', price: 'At any price', preferred: true },
+        { name: 'Freelance', price: 'From $15/hour' }
     ],
     socialLinks: [
-        {
-            name: 'GitHub',
-            url: 'https://github.com/NguyenVanPhi92',
-            icon: FiGithub
-        },
-        {
-            name: 'Facebook',
-            url: 'https://www.facebook.com/aotisnguyen',
-            icon: FiFacebook
-        }
+        { name: 'GitHub', url: 'https://github.com/NguyenVanPhi92', icon: FiGithub },
+        { name: 'Facebook', url: 'https://www.facebook.com/aotisnguyen', icon: FiFacebook }
     ],
     expertises: [
         {
@@ -44,14 +29,8 @@ export const AppConfig = {
             icon: FiCloud,
             description: 'AWS, GCP, Azure, Kubernetes, Docker, etc.'
         },
-        {
-            name: 'IoT Development',
-            icon: FiCpu,
-            description: 'ESP32, ESP8266, Arduino, etc.'
-        }
+        { name: 'IoT Development', icon: FiCpu, description: 'ESP32, ESP8266, Arduino, etc.' }
     ],
-    analytics: {
-        gaId: 'G-NF39CSC1T1'
-    },
+    analytics: { gaId: 'G-NF39CSC1T1' },
     giscusEnabled: true
 }

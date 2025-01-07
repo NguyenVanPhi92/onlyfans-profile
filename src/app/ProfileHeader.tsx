@@ -28,9 +28,7 @@ export default function ProfileHeader() {
             <div className='flex flex-row justify-between px-4'>
                 <div
                     className='overflow-hidden rounded-full w-[100px] h-[100px] bg-cover bg-center border-2 border-white -mt-[32px]'
-                    style={{
-                        backgroundImage: `url('${AppConfig.avatar}')`
-                    }}
+                    style={{ backgroundImage: `url('${AppConfig.avatar}')` }}
                 />
                 <div className='pt-4'>
                     <div className='border border-neutral-200 w-12 h-12 rounded-full flex justify-center items-center'>

@@ -12,7 +12,7 @@ export default function ProfileContentsTabBar() {
     }, [activeTab])
 
     return (
-        <div className={'flex flex-row text-[14px] font-medium'}>
+        <div className='flex flex-row text-[14px] font-medium'>
             {tabs.map((tab) => (
                 <div
                     className={cn(

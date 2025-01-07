@@ -17,10 +17,10 @@ export const tabs = [
 
 export default function ProfileContents() {
     return (
-        <div className={'bg-white border-t'}>
+        <div className='bg-white border-t'>
             <ProfileContentsTabBar />
 
-            <div className={'bg-neutral-100'}>
+            <div className='bg-neutral-100'>
                 {tabs.map((tab) => (
                     <div key={tab.key} className={`hidden profile-tab profile-tab-${tab.key}`}>
                         {tab.content}

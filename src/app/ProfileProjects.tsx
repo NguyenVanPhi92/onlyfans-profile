@@ -28,42 +28,36 @@ function ProjectItem({ project }: { project: any }) {
     }, [showReadme])
 
     return (
-        <div key={project.id} className={'bg-white border-neutral-200 p-4'}>
-            <div className={'flex flex-row justify-between'}>
+        <div key={project.id} className='bg-white border-neutral-200 p-4'>
+            <div className='flex flex-row justify-between'>
                 <a
                     href={project.html_url}
-                    className={'font-bold text-[15px] hover:text-primary'}
+                    className='font-bold text-[15px] hover:text-primary'
                     rel='noopener noreferrer'
                 >
                     {project.name}
                 </a>
-                <div className={'font-semibold text-[12px]'}>
+                <div className='font-semibold text-[12px]'>
                     {new Date(project.updated_at).getFullYear()}
                 </div>
             </div>
-            <p className={'text-neutral-500 text-[12px]'}>
+            <p className='text-neutral-500 text-[12px]'>
                 {project.description || 'No description provided.'}
             </p>
-            <div className={'flex flex-row justify-between items-center'}>
-                <div
-                    className={
-                        'text-neutral-500 font-semibold text-[14px] flex flex-row gap-3 mt-4'
-                    }
-                >
-                    <div className={'flex flex-row items-center gap-1'}>
+            <div className='flex flex-row justify-between items-center'>
+                <div className='text-neutral-500 font-semibold text-[14px] flex flex-row gap-3 mt-4'>
+                    <div className='flex flex-row items-center gap-1'>
                         <FiStar /> {project.stargazers_count}
                     </div>
-                    <div className={'flex flex-row items-center gap-1'}>
+                    <div className='flex flex-row items-center gap-1'>
                         <FiGitBranch /> {project.forks_count}
                     </div>
-                    <div className={'flex flex-row items-center gap-1'}>
+                    <div className='flex flex-row items-center gap-1'>
                         <FiAlertTriangle /> {project.open_issues}
                     </div>
                 </div>
                 <div
-                    className={
-                        'flex flex-row text-[12px] text-neutral-500 items-center gap-1 cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white rounded-full py-0.5 pl-1 pr-2 -mr-2'
-                    }
+                    className='flex flex-row text-[12px] text-neutral-500 items-center gap-1 cursor-pointer transition-all duration-300 hover:bg-primary hover:text-white rounded-full py-0.5 pl-1 pr-2 -mr-2'
                     onClick={() => setShowReadme(!showReadme)}
                 >
                     <FiChevronDown
@@ -71,12 +65,12 @@ function ProjectItem({ project }: { project: any }) {
                             'transition-transform duration-300',
                             showReadme ? 'rotate-180' : ''
                         )}
-                    />{' '}
+                    />
                     Preview
                 </div>
             </div>
             {showReadme && (
-                <div className={'text-[12px] bg-neutral-100 mt-4 p-4 rounded-lg'}>
+                <div className='text-[12px] bg-neutral-100 mt-4 p-4 rounded-lg'>
                     <Markdown>{readme}</Markdown>
                 </div>
             )}

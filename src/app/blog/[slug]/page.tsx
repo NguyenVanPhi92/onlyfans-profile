@@ -32,14 +32,11 @@ interface PostContentProps {
 export async function generateMetadata({ params }: PostContentProps): Promise<Metadata> {
     const slug = (await params).slug
     const post = await getPostData(slug)
-
     return {
         title: post.title,
         description: post.summary,
         publisher: AppConfig.name,
-        openGraph: {
-            images: post.images ?? []
-        }
+        openGraph: { images: post.images ?? [] }
     }
 }
 
@@ -48,23 +45,21 @@ export default async function PostContent({ params }: PostContentProps) {
     const post = await getPostData(slug)
     return (
         <AppLayout>
-            <div className={'p-4 bg-white border-b w-full'}>
+            <div className='p-4 bg-white border-b w-full'>
                 <a
-                    href={'/'}
-                    className={
-                        'flex flex-row gap-1 items-center text-[12px] mb-4 cursor-pointer hover:text-primary'
-                    }
+                    href='/'
+                    className='flex flex-row gap-1 items-center text-[12px] mb-4 cursor-pointer hover:text-primary'
                 >
                     <FiArrowLeft /> Go Back
                 </a>
-                <div className={'font-bold text-xl'}>{post.title}</div>
-                <div className={'text-[12px] text-neutral-600 mt-2'}>{post.summary}</div>
+                <div className='font-bold text-xl'>{post.title}</div>
+                <div className='text-[12px] text-neutral-600 mt-2'>{post.summary}</div>
             </div>
-            <div className={'w-full'}>
+            <div className='w-full'>
                 <PostPictures post={post} />
             </div>
             <Markdown
-                className={'text-[14px] bg-white p-4 my-4 border-y leading-relaxed post-content'}
+                className='text-[14px] bg-white p-4 my-4 border-y leading-relaxed post-content'
                 components={{
                     code({ inline, className, ...props }) {
                         const hasLang = /language-(\w+)/.exec(className || '')

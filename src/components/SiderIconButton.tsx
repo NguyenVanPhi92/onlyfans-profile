@@ -21,10 +21,10 @@ export function IconButton(props: IconButtonProps) {
                 if (props.url) location.href = props.url
             }}
         >
-            <div className={'w-[32px]'}>
-                <props.icon className={'text-[22px] mx-auto'} />
+            <div className='w-[32px]'>
+                <props.icon className='text-[22px] mx-auto' />
             </div>
-            <div className={'hidden lg:block'}>{props.label}</div>
+            <div className='hidden lg:block'>{props.label}</div>
         </div>
     )
 }

@@ -10,18 +10,12 @@ export function getSortedPostsData() {
     const allPostsData: any[] = fileNames.map((fileName) => {
         // Remove ".md" from file name to get the slug
         const slug = fileName.replace(/\.md$/, '')
-
         // Read Markdown file as a string
         const fullPath = path.join(postsDirectory, fileName)
         const fileContents = fs.readFileSync(fullPath, 'utf8')
-
         // Parse the file's front matter
         const { data } = matter(fileContents)
-
-        return {
-            slug,
-            ...data // Add front matter fields (e.g., title, date)
-        }
+        return { slug, ...data } // Add front matter fields (e.g., title, date)
     })
 
     // Sort posts by date
@@ -31,17 +25,10 @@ export function getSortedPostsData() {
 export async function getPostData(slug: string) {
     const fs = (await import('fs')).default
     const path = (await import('path')).default
-
     const postsDirectory = path.join(process.cwd(), 'posts')
     const fullPath = path.join(postsDirectory, `${slug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
     const { data, content } = matter(fileContents)
-
-    return {
-        slug,
-        content,
-        images: data.images || [], // Add this line to include images from the front matter
-        ...data
-    } as any
+    return { slug, content, images: data.images || [], ...data } as any
+    //data.images || []: Add this line to include images from the front matter
 }

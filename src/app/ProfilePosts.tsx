@@ -11,9 +11,7 @@ export default function ProfilePosts() {
                     <div className='flex flex-row gap-2 items-center p-4 pb-0'>
                         <div
                             className='overflow-hidden rounded-full w-14 aspect-square bg-cover bg-center border-2 border-white'
-                            style={{
-                                backgroundImage: `url('${AppConfig.avatar}')`
-                            }}
+                            style={{ backgroundImage: `url('${AppConfig.avatar}')` }}
                         />
                         <div className='flex flex-col'>
                             <div className='font-semibold'>{AppConfig.name}</div>
